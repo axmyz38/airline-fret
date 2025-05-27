@@ -1,0 +1,715 @@
+2025-05-27 22:14:29,974 - stock_prediction - INFO - Starting stock prediction
+2025-05-27 22:14:29,982 - stock_prediction - INFO - Target symbol: NVDA
+2025-05-27 22:14:29,982 - stock_prediction - INFO - Loading data
+2025-05-27 22:14:29,989 - stock_prediction - INFO - Loading data from Tiingo
+2025-05-27 22:14:29,994 - stock_prediction - INFO - Fetching data for AAPL
+2025-05-27 22:14:30,633 - stock_prediction - INFO - Data retrieved for AAPL: (782, 12)
+2025-05-27 22:14:31,143 - stock_prediction - INFO - Fetching data for MSFT
+2025-05-27 22:14:31,470 - stock_prediction - INFO - Data retrieved for MSFT: (782, 12)
+2025-05-27 22:14:31,979 - stock_prediction - INFO - Fetching data for GOOGL
+2025-05-27 22:14:32,306 - stock_prediction - INFO - Data retrieved for GOOGL: (782, 12)
+2025-05-27 22:14:32,816 - stock_prediction - INFO - Fetching data for AMZN
+2025-05-27 22:14:33,127 - stock_prediction - INFO - Data retrieved for AMZN: (782, 12)
+2025-05-27 22:14:33,637 - stock_prediction - INFO - Fetching data for META
+2025-05-27 22:14:33,973 - stock_prediction - INFO - Data retrieved for META: (782, 12)
+2025-05-27 22:14:34,489 - stock_prediction - INFO - Data loaded successfully: (782, 60)
+2025-05-27 22:14:34,489 - stock_prediction - INFO - Data period: 2020-01-02 00:00:00 to 2022-12-30 00:00:00
+2025-05-27 22:14:34,489 - stock_prediction - INFO - Data loaded: (782, 60)
+2025-05-27 22:14:34,489 - stock_prediction - INFO - Loading exogenous data
+2025-05-27 22:14:34,497 - stock_prediction - INFO - Fetching fundamental data for AAPL
+2025-05-27 22:14:34,810 - stock_prediction - WARNING - Could not fetch daily fundamentals for AAPL: TiingoClient.get_fundamentals_daily() got an unexpected keyword argument 'tickers'
+2025-05-27 22:14:34,811 - stock_prediction - WARNING - Could not fetch statements for AAPL: 'TiingoClient' object has no attribute 'get_fundamentals'
+2025-05-27 22:14:34,811 - stock_prediction - WARNING - Could not fetch key metrics for AAPL: 'TiingoClient' object has no attribute 'get_fundamentals_metrics'
+2025-05-27 22:14:34,812 - stock_prediction - INFO - Fetching fundamental data for MSFT
+2025-05-27 22:14:34,944 - stock_prediction - WARNING - Could not fetch daily fundamentals for MSFT: TiingoClient.get_fundamentals_daily() got an unexpected keyword argument 'tickers'
+2025-05-27 22:14:34,944 - stock_prediction - WARNING - Could not fetch statements for MSFT: 'TiingoClient' object has no attribute 'get_fundamentals'
+2025-05-27 22:14:34,944 - stock_prediction - WARNING - Could not fetch key metrics for MSFT: 'TiingoClient' object has no attribute 'get_fundamentals_metrics'
+2025-05-27 22:14:34,945 - stock_prediction - INFO - Fetching fundamental data for GOOGL
+2025-05-27 22:14:35,081 - stock_prediction - WARNING - Could not fetch daily fundamentals for GOOGL: TiingoClient.get_fundamentals_daily() got an unexpected keyword argument 'tickers'
+2025-05-27 22:14:35,082 - stock_prediction - WARNING - Could not fetch statements for GOOGL: 'TiingoClient' object has no attribute 'get_fundamentals'
+2025-05-27 22:14:35,082 - stock_prediction - WARNING - Could not fetch key metrics for GOOGL: 'TiingoClient' object has no attribute 'get_fundamentals_metrics'
+2025-05-27 22:14:35,083 - stock_prediction - INFO - Fetching fundamental data for AMZN
+2025-05-27 22:14:35,211 - stock_prediction - WARNING - Could not fetch daily fundamentals for AMZN: TiingoClient.get_fundamentals_daily() got an unexpected keyword argument 'tickers'
+2025-05-27 22:14:35,211 - stock_prediction - WARNING - Could not fetch statements for AMZN: 'TiingoClient' object has no attribute 'get_fundamentals'
+2025-05-27 22:14:35,212 - stock_prediction - WARNING - Could not fetch key metrics for AMZN: 'TiingoClient' object has no attribute 'get_fundamentals_metrics'
+2025-05-27 22:14:35,214 - stock_prediction - INFO - Fetching fundamental data for META
+2025-05-27 22:14:35,334 - stock_prediction - WARNING - Could not fetch daily fundamentals for META: TiingoClient.get_fundamentals_daily() got an unexpected keyword argument 'tickers'
+2025-05-27 22:14:35,335 - stock_prediction - WARNING - Could not fetch statements for META: 'TiingoClient' object has no attribute 'get_fundamentals'
+2025-05-27 22:14:35,335 - stock_prediction - WARNING - Could not fetch key metrics for META: 'TiingoClient' object has no attribute 'get_fundamentals_metrics'
+2025-05-27 22:14:35,336 - stock_prediction - INFO - Exogenous data loaded: 2 sources
+2025-05-27 22:14:35,336 - stock_prediction - INFO - Cleaning data
+2025-05-27 22:14:35,389 - stock_prediction - INFO - Missing values: 1560 -> 0
+2025-05-27 22:14:35,390 - stock_prediction - INFO - Preprocessing data
+2025-05-27 22:14:35,391 - stock_prediction - INFO - Checking and fixing date index
+2025-05-27 22:14:35,391 - stock_prediction - INFO - Date index verification complete. Frequency: <BusinessDay>, Period: 2020-01-02 00:00:00 to 2022-12-30 00:00:00
+2025-05-27 22:14:35,392 - stock_prediction - INFO - Detected 0 missing values
+2025-05-27 22:14:35,392 - stock_prediction - INFO - Detecting anomalies
+2025-05-27 22:14:35,414 - stock_prediction - INFO - Integrating exogenous data
+2025-05-27 22:14:35,420 - stock_prediction - INFO - Integrated 4 macroeconomic variables
+2025-05-27 22:14:35,420 - stock_prediction - ERROR - Error integrating exogenous data: 'dict' object has no attribute 'index'
+2025-05-27 22:14:35,420 - stock_prediction - INFO - Scaling features
+2025-05-27 22:14:35,440 - stock_prediction - INFO - Features scaled: 54 variables
+2025-05-27 22:14:35,441 - stock_prediction - INFO - Preprocessing complete. Final data shape: (782, 64)
+2025-05-27 22:14:35,441 - stock_prediction - INFO - Adding technical indicators
+2025-05-27 22:14:35,441 - stock_prediction - INFO - Adding technical indicators
+2025-05-27 22:14:35,481 - stock_prediction - INFO - Technical indicators added. New columns: 134
+2025-05-27 22:14:35,481 - stock_prediction - INFO - Adding sentiment features
+2025-05-27 22:14:35,481 - stock_prediction - INFO - Fetching sentiment data for 5 symbols
+2025-05-27 22:14:35,482 - stock_prediction - INFO - Processing sentiment for AAPL
+2025-05-27 22:14:35,485 - stock_prediction - INFO - Sentiment data generated for AAPL: (1096, 8)
+2025-05-27 22:14:35,485 - stock_prediction - INFO - Processing sentiment for MSFT
+2025-05-27 22:14:35,489 - stock_prediction - INFO - Sentiment data generated for MSFT: (1096, 8)
+2025-05-27 22:14:35,489 - stock_prediction - INFO - Processing sentiment for GOOGL
+2025-05-27 22:14:35,492 - stock_prediction - INFO - Sentiment data generated for GOOGL: (1096, 8)
+2025-05-27 22:14:35,492 - stock_prediction - INFO - Processing sentiment for AMZN
+2025-05-27 22:14:35,496 - stock_prediction - INFO - Sentiment data generated for AMZN: (1096, 8)
+2025-05-27 22:14:35,496 - stock_prediction - INFO - Processing sentiment for META
+2025-05-27 22:14:35,500 - stock_prediction - INFO - Sentiment data generated for META: (1096, 8)
+2025-05-27 22:14:35,500 - stock_prediction - INFO - Integrating sentiment data with price data
+2025-05-27 22:14:35,522 - stock_prediction - WARNING - Found 23080 NaN values after integrating sentiment data
+2025-05-27 22:14:35,523 - stock_prediction - INFO - Sentiment data integrated. Final shape: (732, 174)
+2025-05-27 22:14:35,524 - stock_prediction - INFO - Performing feature engineering
+2025-05-27 22:14:35,524 - stock_prediction - INFO - Engineering features
+2025-05-27 22:14:35,524 - stock_prediction - INFO - Adding technical indicators
+2025-05-27 22:14:35,562 - stock_prediction - INFO - Technical indicators added. New columns: 174
+2025-05-27 22:14:35,563 - stock_prediction - INFO - Technical indicators added
+2025-05-27 22:14:35,587 - stock_prediction - INFO - Calendar features added
+2025-05-27 22:14:35,603 - stock_prediction - INFO - Cross-asset features added
+2025-05-27 22:14:35,606 - stock_prediction - INFO - Feature engineering complete. Data shape: (682, 238)
+2025-05-27 22:14:35,606 - stock_prediction - INFO - Creating lagged features with lags: [1, 2, 3, 5, 10, 21]
+2025-05-27 22:14:35,662 - stock_prediction - INFO - Created lagged features. Final data shape: (619, 398)
+2025-05-27 22:14:35,663 - stock_prediction - INFO - Splitting data into train and test sets
+2025-05-27 22:14:35,666 - stock_prediction - ERROR - Could not find Close prices for NVDA
+2025-05-27 22:14:35,668 - stock_prediction - INFO - Created target variables for horizon=10. X shape: (0, 398), y shape: (0, 0)
+2025-05-27 22:14:35,668 - stock_prediction - INFO - Train set: (0, 398), Test set: (0, 398)
+2025-05-27 22:14:35,668 - stock_prediction - INFO - Training models
+2025-05-27 22:14:35,668 - stock_prediction - INFO - Training ARIMA model
+2025-05-27 22:14:35,669 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,669 - stock_prediction - INFO - Training GARCH model
+2025-05-27 22:14:35,669 - stock_prediction - ERROR - Error fitting GARCH model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,669 - stock_prediction - INFO - Training machine learning models
+2025-05-27 22:14:35,669 - stock_prediction - INFO - Training random_forest model
+2025-05-27 22:14:35,669 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,669 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,678 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,679 - stock_prediction - INFO - Training gradient_boosting model
+2025-05-27 22:14:35,679 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,679 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,682 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,682 - stock_prediction - INFO - Training ridge model
+2025-05-27 22:14:35,682 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,682 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,683 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,684 - stock_prediction - INFO - Training ML ensemble
+2025-05-27 22:14:35,684 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,684 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,684 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,684 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,686 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,686 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,686 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,687 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,688 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,688 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,688 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,688 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,689 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,689 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,689 - stock_prediction - INFO - Training LSTM model
+2025-05-27 22:14:35,689 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,690 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,690 - stock_prediction - INFO - Training GRU model
+2025-05-27 22:14:35,690 - stock_prediction - INFO - Fitting GRU model
+2025-05-27 22:14:35,690 - stock_prediction - ERROR - Error fitting GRU model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,690 - stock_prediction - INFO - Creating ensemble model
+2025-05-27 22:14:35,690 - stock_prediction - INFO - Fitting ensemble with models: arima, ml, lstm
+2025-05-27 22:14:35,690 - stock_prediction - INFO - Fitting arima model
+2025-05-27 22:14:35,690 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,691 - stock_prediction - INFO - Fitting ml model
+2025-05-27 22:14:35,691 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,691 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,691 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,691 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,692 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,692 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,693 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,693 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,694 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,695 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,695 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,695 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,696 - stock_prediction - ERROR - Error fitting ML model: Cannot have number of folds=6 greater than the number of samples=0.
+2025-05-27 22:14:35,696 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,696 - stock_prediction - INFO - Fitting lstm model
+2025-05-27 22:14:35,696 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,696 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,696 - stock_prediction - INFO - Ensemble fitting complete
+2025-05-27 22:14:35,696 - stock_prediction - INFO - Trained 9 models
+2025-05-27 22:14:35,696 - stock_prediction - INFO - Evaluating models
+2025-05-27 22:14:35,698 - stock_prediction - INFO - Evaluating arima model
+2025-05-27 22:14:35,698 - stock_prediction - ERROR - Error evaluating ARIMA model: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,698 - stock_prediction - INFO - Evaluating garch model
+2025-05-27 22:14:35,698 - stock_prediction - ERROR - Error evaluating GARCH model: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,698 - stock_prediction - INFO - Evaluating random_forest model
+2025-05-27 22:14:35,698 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,698 - stock_prediction - INFO - Evaluating gradient_boosting model
+2025-05-27 22:14:35,698 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,698 - stock_prediction - INFO - Evaluating ridge model
+2025-05-27 22:14:35,698 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,698 - stock_prediction - INFO - Evaluating ml_ensemble model
+2025-05-27 22:14:35,698 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,699 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,699 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,699 - stock_prediction - INFO - Generating ensemble predictions for 0 samples
+2025-05-27 22:14:35,699 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,699 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,699 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,699 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,701 - stock_prediction - ERROR - Error evaluating ensemble: at least one array or dtype is required
+2025-05-27 22:14:35,701 - stock_prediction - INFO - Evaluating lstm model
+2025-05-27 22:14:35,701 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,701 - stock_prediction - INFO - Evaluating gru model
+2025-05-27 22:14:35,701 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,701 - stock_prediction - INFO - Evaluating ensemble model
+2025-05-27 22:14:35,701 - stock_prediction - ERROR - Error evaluating ARIMA model: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,701 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,702 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,702 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,702 - stock_prediction - INFO - Generating ensemble predictions for 0 samples
+2025-05-27 22:14:35,702 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,702 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,702 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,702 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,703 - stock_prediction - ERROR - Error evaluating ensemble: at least one array or dtype is required
+2025-05-27 22:14:35,703 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,703 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,703 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,703 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,703 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:35,703 - stock_prediction - ERROR - Error evaluating ensemble: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:35,704 - stock_prediction - INFO - Running backtests
+2025-05-27 22:14:35,704 - stock_prediction - INFO - Backtesting arima model
+2025-05-27 22:14:35,704 - stock_prediction - INFO - Backtesting garch model
+2025-05-27 22:14:35,704 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,704 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,705 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,705 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,705 - stock_prediction - ERROR - Error fitting GARCH model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,705 - stock_prediction - ERROR - Error generating GARCH forecast: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,705 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,705 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,705 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,706 - stock_prediction - ERROR - Error fitting GARCH model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,706 - stock_prediction - ERROR - Error generating GARCH forecast: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,706 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,706 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,706 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,706 - stock_prediction - ERROR - Error fitting GARCH model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,706 - stock_prediction - ERROR - Error generating GARCH forecast: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,708 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,708 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,708 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,708 - stock_prediction - ERROR - Error fitting GARCH model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,708 - stock_prediction - ERROR - Error generating GARCH forecast: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,709 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,709 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,709 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,709 - stock_prediction - ERROR - Error fitting GARCH model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,709 - stock_prediction - ERROR - Error generating GARCH forecast: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,709 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,711 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,711 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,711 - stock_prediction - INFO - Backtesting random_forest model
+2025-05-27 22:14:35,711 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,712 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,712 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,713 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,713 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,713 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,713 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,713 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,713 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,714 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,714 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,714 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,714 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,714 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,714 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,714 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,716 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,716 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,716 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,716 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,716 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,716 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,716 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,716 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,717 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,717 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,717 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,717 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,717 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,717 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,718 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,718 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,718 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,718 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,718 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,719 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,719 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,719 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,720 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,720 - stock_prediction - INFO - Backtesting gradient_boosting model
+2025-05-27 22:14:35,720 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,720 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,722 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,722 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,722 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,722 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,722 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,723 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,723 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,723 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,723 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,723 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,724 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,724 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,724 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,724 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,724 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,725 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,725 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,725 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,725 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,725 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,725 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,726 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,726 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,726 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,726 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,726 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,726 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,726 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,726 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,726 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,728 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,728 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,728 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,728 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,728 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,729 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,729 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,729 - stock_prediction - INFO - Backtesting ridge model
+2025-05-27 22:14:35,730 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,730 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,730 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,730 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,730 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,730 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,731 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,731 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,731 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,731 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,732 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,732 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,732 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,732 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,732 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,732 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,733 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,733 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,733 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,733 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,734 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,734 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,734 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,734 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,734 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,735 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,735 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,735 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,735 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,735 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,736 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,736 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,736 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,737 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,737 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,737 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,737 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,738 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,738 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,738 - stock_prediction - INFO - Backtesting ml_ensemble model
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,739 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,739 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,741 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,741 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,741 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,741 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,741 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,741 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,742 - stock_prediction - INFO - Generating ensemble predictions for 37 samples
+2025-05-27 22:14:35,742 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,742 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,742 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,742 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,742 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,743 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,743 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,743 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,743 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,743 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,743 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,743 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,744 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,744 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,744 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,744 - stock_prediction - INFO - Generating ensemble predictions for 37 samples
+2025-05-27 22:14:35,746 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,746 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,746 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,746 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,746 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,746 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,746 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,747 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,747 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,747 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,747 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,747 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,747 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,748 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,748 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,748 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,748 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,748 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,748 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,748 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,748 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,748 - stock_prediction - INFO - Generating ensemble predictions for 37 samples
+2025-05-27 22:14:35,750 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,750 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,750 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,750 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,750 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,750 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,751 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,751 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,751 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,751 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,751 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,751 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,752 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,752 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,752 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,752 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,752 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,752 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,752 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,753 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,753 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,753 - stock_prediction - INFO - Generating ensemble predictions for 37 samples
+2025-05-27 22:14:35,753 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,753 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,753 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,753 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,753 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,754 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,754 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,754 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,754 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,754 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,755 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,755 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,755 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,755 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,755 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,755 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,755 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,756 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,756 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,756 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,757 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,757 - stock_prediction - INFO - Generating ensemble predictions for 37 samples
+2025-05-27 22:14:35,757 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,757 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,757 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,757 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,757 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,758 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,759 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,759 - stock_prediction - INFO - Backtesting lstm model
+2025-05-27 22:14:35,759 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,759 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,760 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,760 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,760 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,760 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,760 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,761 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,761 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,761 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,761 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,762 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,762 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,762 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,762 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,762 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,763 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,763 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,763 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,763 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,763 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,763 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,764 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,764 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,764 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,764 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,764 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,764 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,765 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,765 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,765 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,765 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,765 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,766 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,766 - stock_prediction - INFO - Backtesting gru model
+2025-05-27 22:14:35,766 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,766 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,766 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,766 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,766 - stock_prediction - INFO - Fitting GRU model
+2025-05-27 22:14:35,766 - stock_prediction - ERROR - Error fitting GRU model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,768 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,768 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,768 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,768 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,769 - stock_prediction - INFO - Fitting GRU model
+2025-05-27 22:14:35,769 - stock_prediction - ERROR - Error fitting GRU model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,769 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,769 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,769 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,769 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,769 - stock_prediction - INFO - Fitting GRU model
+2025-05-27 22:14:35,769 - stock_prediction - ERROR - Error fitting GRU model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,769 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,770 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,770 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,770 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,770 - stock_prediction - INFO - Fitting GRU model
+2025-05-27 22:14:35,770 - stock_prediction - ERROR - Error fitting GRU model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,770 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,771 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,771 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,771 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,771 - stock_prediction - INFO - Fitting GRU model
+2025-05-27 22:14:35,771 - stock_prediction - ERROR - Error fitting GRU model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,771 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,772 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,772 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,773 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,773 - stock_prediction - INFO - Backtesting ensemble model
+2025-05-27 22:14:35,773 - stock_prediction - INFO - Starting rolling window backtest with 5 windows
+2025-05-27 22:14:35,774 - stock_prediction - INFO - Total samples: 619, Initial train size: 433, Test size per window: 37
+2025-05-27 22:14:35,774 - stock_prediction - INFO - Window 1/5 - Train: 433 samples, Test: 37 samples
+2025-05-27 22:14:35,774 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,775 - stock_prediction - INFO - Fitting ensemble with models: arima, ml, lstm
+2025-05-27 22:14:35,775 - stock_prediction - INFO - Fitting arima model
+2025-05-27 22:14:35,775 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,776 - stock_prediction - INFO - Fitting ml model
+2025-05-27 22:14:35,776 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,776 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,776 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,776 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,776 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,777 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,777 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,777 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,777 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,777 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,777 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,777 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,778 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [433, 0]
+2025-05-27 22:14:35,778 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,778 - stock_prediction - INFO - Fitting lstm model
+2025-05-27 22:14:35,778 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,778 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,778 - stock_prediction - INFO - Ensemble fitting complete
+2025-05-27 22:14:35,778 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,778 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,778 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,778 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:35,778 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,779 - stock_prediction - INFO - Window 2/5 - Train: 470 samples, Test: 37 samples
+2025-05-27 22:14:35,779 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,779 - stock_prediction - INFO - Fitting ensemble with models: arima, ml, lstm
+2025-05-27 22:14:35,779 - stock_prediction - INFO - Fitting arima model
+2025-05-27 22:14:35,779 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,779 - stock_prediction - INFO - Fitting ml model
+2025-05-27 22:14:35,779 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,781 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,781 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,781 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,781 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,781 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,781 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,781 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,782 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,782 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,782 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,782 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,782 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [470, 0]
+2025-05-27 22:14:35,782 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,782 - stock_prediction - INFO - Fitting lstm model
+2025-05-27 22:14:35,783 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,783 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,783 - stock_prediction - INFO - Ensemble fitting complete
+2025-05-27 22:14:35,783 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,783 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,783 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,783 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:35,783 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,784 - stock_prediction - INFO - Window 3/5 - Train: 507 samples, Test: 37 samples
+2025-05-27 22:14:35,784 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,784 - stock_prediction - INFO - Fitting ensemble with models: arima, ml, lstm
+2025-05-27 22:14:35,784 - stock_prediction - INFO - Fitting arima model
+2025-05-27 22:14:35,784 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,784 - stock_prediction - INFO - Fitting ml model
+2025-05-27 22:14:35,785 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,785 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,785 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,785 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,785 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,785 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,785 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,786 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,786 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,786 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,786 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,786 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,786 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [507, 0]
+2025-05-27 22:14:35,786 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,787 - stock_prediction - INFO - Fitting lstm model
+2025-05-27 22:14:35,787 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,787 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,787 - stock_prediction - INFO - Ensemble fitting complete
+2025-05-27 22:14:35,787 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,787 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,787 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,787 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:35,787 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,788 - stock_prediction - INFO - Window 4/5 - Train: 544 samples, Test: 37 samples
+2025-05-27 22:14:35,788 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,788 - stock_prediction - INFO - Fitting ensemble with models: arima, ml, lstm
+2025-05-27 22:14:35,788 - stock_prediction - INFO - Fitting arima model
+2025-05-27 22:14:35,788 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,789 - stock_prediction - INFO - Fitting ml model
+2025-05-27 22:14:35,789 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,789 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,789 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,789 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,791 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,791 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,791 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,791 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,791 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,792 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,792 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,792 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,792 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [544, 0]
+2025-05-27 22:14:35,792 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,793 - stock_prediction - INFO - Fitting lstm model
+2025-05-27 22:14:35,793 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,793 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,793 - stock_prediction - INFO - Ensemble fitting complete
+2025-05-27 22:14:35,793 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,793 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,793 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,794 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:35,794 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,794 - stock_prediction - INFO - Window 5/5 - Train: 581 samples, Test: 37 samples
+2025-05-27 22:14:35,794 - stock_prediction - INFO - Fitting model for this window
+2025-05-27 22:14:35,794 - stock_prediction - INFO - Fitting ensemble with models: arima, ml, lstm
+2025-05-27 22:14:35,794 - stock_prediction - INFO - Fitting arima model
+2025-05-27 22:14:35,794 - stock_prediction - ERROR - Error fitting ARIMA model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,795 - stock_prediction - INFO - Fitting ml model
+2025-05-27 22:14:35,795 - stock_prediction - INFO - Fitting ML ensemble with 3 algorithms
+2025-05-27 22:14:35,795 - stock_prediction - INFO - Fitting random_forest model
+2025-05-27 22:14:35,795 - stock_prediction - INFO - Fitting random_forest model with 398 features
+2025-05-27 22:14:35,795 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,795 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,796 - stock_prediction - INFO - Fitting gradient_boosting model
+2025-05-27 22:14:35,796 - stock_prediction - INFO - Fitting gradient_boosting model with 398 features
+2025-05-27 22:14:35,796 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,796 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,796 - stock_prediction - INFO - Fitting ridge model
+2025-05-27 22:14:35,796 - stock_prediction - INFO - Fitting ridge model with 398 features
+2025-05-27 22:14:35,796 - stock_prediction - INFO - Performing hyperparameter optimization with bayesian search
+2025-05-27 22:14:35,796 - stock_prediction - ERROR - Error fitting ML model: Found input variables with inconsistent numbers of samples: [581, 0]
+2025-05-27 22:14:35,796 - stock_prediction - INFO - ML ensemble fitting complete
+2025-05-27 22:14:35,798 - stock_prediction - INFO - Fitting lstm model
+2025-05-27 22:14:35,798 - stock_prediction - INFO - Fitting LSTM model
+2025-05-27 22:14:35,798 - stock_prediction - ERROR - Error fitting LSTM model: index 0 is out of bounds for axis 0 with size 0
+2025-05-27 22:14:35,798 - stock_prediction - INFO - Ensemble fitting complete
+2025-05-27 22:14:35,798 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,798 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,798 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,798 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:35,799 - stock_prediction - ERROR - Model prediction failed
+2025-05-27 22:14:35,799 - stock_prediction - INFO - Calculating backtest metrics
+2025-05-27 22:14:35,800 - stock_prediction - ERROR - Error in backtest: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+2025-05-27 22:14:35,800 - stock_prediction - INFO - Generating visualizations
+2025-05-27 22:14:35,801 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,801 - stock_prediction - ERROR - Error generating GARCH forecast: 'GARCHModel' object has no attribute 'result'
+2025-05-27 22:14:35,801 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,801 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,801 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,801 - stock_prediction - INFO - Generating ensemble predictions for 0 samples
+2025-05-27 22:14:35,801 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,802 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,802 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,802 - stock_prediction - ERROR - No valid predictions from any model
+2025-05-27 22:14:35,802 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,802 - stock_prediction - ERROR - Model not fitted
+2025-05-27 22:14:35,802 - stock_prediction - INFO - Generating ensemble predictions
+2025-05-27 22:14:35,802 - stock_prediction - INFO - Getting predictions from arima model
+2025-05-27 22:14:35,802 - stock_prediction - ERROR - Error generating ARIMA forecast: 'ARIMAModel' object has no attribute 'result'
+2025-05-27 22:14:35,803 - stock_prediction - ERROR - Error generating ensemble predictions: object of type 'NoneType' has no len()
+2025-05-27 22:14:36,146 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:36,378 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:36,612 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:36,829 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:37,049 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:37,269 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:37,489 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:37,708 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:37,929 - stock_prediction - ERROR - Error plotting price predictions: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:38,154 - stock_prediction - ERROR - Error plotting model comparison: 'NoneType' object has no attribute 'index'
+2025-05-27 22:14:38,154 - stock_prediction - ERROR - Could not find Close price column for NVDA
+2025-05-27 22:14:38,154 - stock_prediction - INFO - Saving models and results
+2025-05-27 22:14:38,156 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,156 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,156 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,156 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,156 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,157 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,157 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,157 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,157 - stock_prediction - WARNING - No model to save
+2025-05-27 22:14:38,161 - stock_prediction - INFO - Stock prediction completed successfully
