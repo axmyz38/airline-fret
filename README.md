@@ -1,5 +1,7 @@
+ codex/model-milp-problem-for-flight-scheduling
 # trading-
 
+codex/define-cost-function-and-expected-revenue
 Trading tools and pricing utilities.
 
 ## Pricing API
@@ -18,3 +20,20 @@ Send a request:
 curl -X POST http://localhost:5000/price -H "Content-Type: application/json" \
      -d '{"remaining_capacity": 42}'
 ```
+=======
+Trading
+
+## Flight planning API
+
+The repository now includes a simple flight planning module. Run the server:
+
+```bash
+python app.py
+```
+
+Send a POST request to `/plan` with JSON payload containing `dates`, `routes`
+and `aircraft` lists to generate a schedule. Results are stored in the
+`flight_schedule` SQLite table.
+=======
+ main
+ main
