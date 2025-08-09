@@ -1,0 +1,3 @@
+booking_id,flight_id,passenger_name,seat,weight,weight_unit
+B001,F001,John Doe,12A,40,lb
+B002,F002,Jane Smith,14C,18,kg
