@@ -1,0 +1,9 @@
+route,date,freight_type,price,demand
+A-B,2024-01-01,standard,100,200
+A-B,2024-02-01,standard,110,210
+A-B,2024-03-01,standard,120,220
+A-B,2024-04-01,standard,130,230
+B-C,2024-01-01,express,150,300
+B-C,2024-02-01,express,160,310
+B-C,2024-03-01,express,170,320
+B-C,2024-04-01,express,180,330
